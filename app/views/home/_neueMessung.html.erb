@@ -1,0 +1,47 @@
+
+<h3> <span class="glyphicon glyphicon-leaf" aria-hidden="true"> Neue Messung <span> </h3>
+<div class="formwrappoer">
+  <%= form_for :water , url: water_path  do |f| %>
+    <div class="col-sm-12 col-md-12">
+      <%= f.label "Datum" %><br>
+      
+    <%= f.date_field :datum, 'data-behaviour' => 'datepicker' , :class => 'form-control datepicker'%>
+    </div>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.datepicker').datepicker();
+  });
+</script>
+    <div class="col-sm-4 col-md-4">
+      <%= f.label "cl2" %><br>
+      <%= f.text_field :cl2 , :class => 'form-control'%>
+    </div>
+    <div class="col-sm-4 col-md-4">
+      <%= f.label "ph" %><br>
+      <%= f.text_field :ph , :class => 'form-control'%>
+    </div>
+    <div class="col-sm-4 col-md-4">
+      <%= f.label "kh" %><br>
+      <%= f.text_field :kh , :class => 'form-control'%>
+    </div>
+    <div class="col-sm-4 col-md-4">
+      <%= f.label "gh" %><br>
+      <%= f.text_field :gh , :class => 'form-control'%>
+    </div>
+    <div class="col-sm-4 col-md-4">
+      <%= f.label "no2" %><br>
+      <%= f.text_field :NO2 , :class => 'form-control'%>
+    </div>
+    <div class="col-sm-4 col-md-4">
+      <%= f.label "no3" %><br>
+      <%= f.text_field :NO3 , :class => 'form-control'%>
+    </div>
+    <div class="col-sm-12 col-md-12">
+      <%= f.label "kommentar" %><br>
+      <%= f.text_field :kommentar , :class => 'form-control'%>
+    </div>
+    <div class="col-sm-12 col-md-12">
+      <%= f.submit "speichern", :class => 'btn btn-default form-control' %>
+    </div>
+  <% end %>
+</div>

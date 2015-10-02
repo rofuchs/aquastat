@@ -1,0 +1,29 @@
+<div class="formwrapper">
+  <h3><span class="glyphicon glyphicon-paperclip" aria-hidden="false"> Fisch bearbeiten <span></h3>
+  <%= form_for @animal, :url => {:controller => "animal", :action => "update"} , html: { multipart: true } do |f| %>
+    <p>
+      <%= f.label :fischart %><br>
+      <%= f.text_field :fischart , :class => 'form-control'%>
+    </p>
+    <p>
+      <%= f.label :farbe %><br>
+      <%= f.text_field :farbe , :class => 'form-control'%>
+    </p>
+    <p>
+      <%= f.label :anzahl %><br>
+      <%= f.text_field :anzahl , :class => 'form-control'%>
+    </p>
+    <p>
+      <%= f.label :sex %><br>
+      <%= f.text_field :sex , :class => 'form-control'%>
+    </p>
+    <p>
+      <%= f.label :kommentar %><br>
+      <%= f.text_field :kommentar , :class => 'form-control'%>
+    </p>
+    <p><%= f.file_field :avatar %></p>
+    <p>
+      <%= f.submit "speichern", :class => 'btn btn-default'%>
+    </p>
+  <% end %>
+</div>

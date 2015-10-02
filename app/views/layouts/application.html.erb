@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Aquastat</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application.js' %>
+  <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %> 
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+  <div id="flashes">
+  
+    <% if flash[:notice] %>
+      <p id="flash_notice" class="messages notice"><%= flash[:notice] %></p>
+      <%= javascript_tag "$('#flash_notice').effect('highlight',{},1000);" %>
+    <% end %>
+  
+    <% if flash[:error] || flash[:errors] %>
+      <p id="flash_errors" class="messages errors"><%= flash[:error] || flash[:errors] %></p>
+      <%= javascript_tag "$('#flash_errors').effect('highlight',{},1000);" %>
+    <% end %>
+  
+    <% flash[:error] = flash[:errors] = flash[:notice] = nil %>
+  </div>
+  <%= yield %>
+</body>
+</html>

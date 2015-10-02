@@ -1,0 +1,34 @@
+<%= stylesheet_link_tag "layout" %>
+<h1 align="center"> Unser Aquarium </h1>
+<%= image_tag("aquabanner.jpg", height: '400', width: "100%")%>
+<br/>
+<div class="container">
+  <div class="thumbnail col-sd-12 col-md-12">
+    <%= render template: "home/_animalTable" %>  
+  </div>
+  
+  <div class="thumbnail col-sd-12 col-md-12">
+    <%= render template: "home/_waterTable" %>
+    <%= render template: "home/_waterchart" %> 
+  </div>
+
+</div>
+<div class="container">
+ 
+  <div style="background: #f9f9f9" class="thumbnail col-sm-4 col-md-3" >
+    <%= render template: "home/_neuerFisch" %>
+  </div>
+  <div style="background: beige" class="thumbnail col-sm-4 col-md-3" >
+    <%= render template: "home/_neueMessung" %>
+  </div>
+  <div class="thumbnail col-sm-4 col-md-5" >
+    <%= image_tag ("dream_fish.jpg") %>
+    <h3>
+      Statistics:
+    </h3>
+    <p>
+      TODO: global stats
+    </p>
+  </div>
+
+</div>

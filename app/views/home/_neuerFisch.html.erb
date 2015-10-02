@@ -1,0 +1,32 @@
+
+<h3><span class="glyphicon glyphicon-paperclip" aria-hidden="false"> Neue Fische <span></h3>
+<div class="formwrapper ">
+  <%= form_for :animal , url: animal_path , :html => {:multipart => true} do |f| %>
+    <div class="col-sm-6 col-md-8">
+      <%= f.label :fischart %><br>
+      <%= f.text_field :fischart , :class => 'form-control'%>
+    </div>
+    <div class="col-sm-6 col-md-8">
+      <%= f.label :farbe %><br>
+      <%= f.text_field :farbe , :class => 'form-control'%>
+    </div>
+    <div class="col-sm-6 col-md-8">
+      <%= f.label :anzahl %><br>
+      <%= f.text_field :anzahl , :class => 'form-control'%>
+    </div>
+    <div class="col-sm-6 col-md-8">
+      <%= f.label :sex %><br>
+      <%= f.text_field :sex , :class => 'form-control'%>
+    </div>
+    <div class="col-sm-6 col-md-8">
+      <%= f.label :kommentar %><br>
+      <%= f.text_field :kommentar , :class => 'form-control'%>
+    </div>
+    <div class="col-sm-6 col-md-8">
+      <%= f.file_field :avatar %>
+    </div>
+    <div class="col-sm-6 col-md-8">
+      <%= f.submit "speichern", :class => 'btn btn-default'%>
+    </div>
+  <% end %>
+</div>

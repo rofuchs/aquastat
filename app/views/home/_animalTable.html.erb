@@ -1,0 +1,29 @@
+<h2> <span class="glyphicon glyphicon-paperclip" aria-hidden="true"> animale </span></h2>
+<table class="table table-striped table-bordered table-condensed">
+  <tr>
+    <th>Fischart</th>
+    <th>Farbe</th>
+    <th>Anzahl</th>
+    <th>m/l</th>
+    <th>Kommentar</th>
+    <th>Bild</th>
+  </tr>
+  <% @animals.each do |animal| %>
+    <tr>
+      <td><%= animal.fischart %></td>
+      <td><%= animal.farbe %></td>
+      <td><%= animal.anzahl %></td>
+      <td><%= animal.sex %></td>
+      <td><%= animal.kommentar %></td>
+      <td><%= image_tag animal.avatar.thumb.url  %> </td>
+      <td> 
+        <%= button_to "show", {:controller => :animal,
+          :action => 'show', :id => animal.id }, :method => :get, :class => 'btn btn-default'%>
+        <%= button_to "edit", {:controller => :animal,
+          :action => 'edit', :id => animal.id }, :method => :get, :class => 'btn btn-default'%>
+        <%= button_to "delete", {:controller => :animal,
+          :action => 'destroy', :id => animal.id }, :method => :delete, :class => 'btn btn-default'%>
+      </td>
+    </tr>
+  <% end %>
+</table>

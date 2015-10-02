@@ -1,0 +1,26 @@
+body {  
+  margin: 0px;  
+  padding: 0px;
+  background: #000; 
+  background-size: 40%;
+  color: #000; 
+  font-family: verdana;  
+  font-size: 14px;  
+}
+
+.thumbnail {
+	margin: 15px 15px ;
+	padding: 15px 15px;
+}
+
+.container {
+	max-width: 1300px;
+	margin: auto;
+	padding: 0;
+}
+.formwrapper {
+  width: 300px;
+}
+h1 {
+  color: #FFF;
+}

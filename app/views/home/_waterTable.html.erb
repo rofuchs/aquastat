@@ -1,0 +1,26 @@
+<h2> <span class="glyphicon glyphicon-leaf" aria-hidden="true"> Wasserqualität </span></h2>
+
+<table class="table table-striped table-bordered table-condensed">
+  <tr>
+    <th>Datum</th>
+    <th>Cl2</th>
+    <th>pH</th>
+    <th>KH</th>
+    <th>GH</th>
+    <th>NO2</th>
+    <th>NO3</th>
+    <th>Kommentar</th>
+  </tr>
+  <% @waters.each do |wat| %>
+    <tr>
+      <td><%= wat.datum %></td>
+      <td><%= wat.cl2 %></td>
+      <td><%= wat.ph %></td>
+      <td><%= wat.kh %></td>
+      <td><%= wat.gh %></td>
+      <td><%= wat.NO2 %></td>
+      <td><%= wat.NO3 %></td>
+      <td><%= wat.kommentar %></td>
+    </tr>
+  <% end %>
+</table>
